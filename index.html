@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Backend Roadmap</title>
+    <meta name="description"
+        content="Lộ trình học Full Stack Developer với Java, Spring Boot, JavaScript, React và Angular">
+    <meta name="keywords"
+        content="fullstack, developer, roadmap, java, spring boot, javascript, jquery, react, angular">
+    <meta name="author" content="Tgrey.hoc.IT">
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png" type="image/png">
+    <title>Full Stack Developer Roadmap</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
@@ -131,10 +137,10 @@
 
         .schedule-block {
             background: var(--dark);
-            padding: 40px;
+            padding: 30px;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 255, 0, 0.1);
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             border: 1px solid var(--primary);
             position: relative;
             overflow: hidden;
@@ -237,46 +243,47 @@
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
-            margin: 20px 0;
+            margin: 15px 0;
             background: var(--dark);
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 0 20px var(--primary-glow);
             position: relative;
             animation: tableGlow 3s infinite alternate;
-            font-size: 1.2em;
+            font-size: 1.1em;
             font-weight: 500;
         }
 
         th {
             background: var(--light);
             color: var(--primary);
-            font-size: 1.4em;
+            font-size: 1.3em;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
-            padding: 22px;
+            padding: 12px 10px;
             border-bottom: 2px solid var(--primary);
             text-shadow: 0 0 5px var(--primary);
         }
 
         td {
-            padding: 18px 22px;
+            padding: 8px 12px;
             border-bottom: 1px solid rgba(0, 255, 0, 0.2);
             transition: all 0.3s ease;
+            line-height: 1.3;
         }
 
         tr:hover td {
             background: var(--light);
             color: var(--primary);
             text-shadow: 0 0 10px var(--primary-glow);
-            transform: scale(1.01);
+            transform: scale(1.005);
             transition: all 0.3s ease;
         }
 
         td ul li {
-            font-size: 1.2em;
-            padding: 8px 0 8px 25px;
+            font-size: 1.1em;
+            padding: 5px 0 5px 20px;
             font-weight: 500;
         }
 
@@ -1319,12 +1326,207 @@
             letter-spacing: 1px;
             text-shadow: 0 0 5px var(--primary-glow);
             background: rgba(0, 255, 0, 0.03);
-            border-right: 2px solid var(--primary);
-            padding: 10px;
+            border: 1px solid var(--primary);
+            padding: 15px;
             border-radius: 10px;
-            width: 50%;
-            margin: 0 auto;
-            font-size: 1.2em;
+            width: 90%;
+            max-width: 800px;
+            margin: 15px auto;
+        }
+
+        /* Estimated learning time badges */
+        .time-estimate {
+            display: inline-block;
+            padding: 4px 8px;
+            background: rgba(0, 100, 0, 0.2);
+            border: 1px solid var(--primary);
+            border-radius: 50px;
+            font-size: 0.85em;
+            color: var(--primary);
+            margin-top: 8px;
+            margin-bottom: 12px;
+        }
+
+        .time-estimate i {
+            margin-right: 5px;
+        }
+
+        /* Resource links */
+        .resources {
+            margin-top: 15px;
+            padding: 12px;
+            background: rgba(0, 100, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .resources h3 {
+            font-size: 1.1em;
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: var(--secondary);
+        }
+
+        .resource-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text);
+            padding: 5px 0;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+        }
+
+        .resource-link i {
+            color: var(--primary);
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .resource-link:hover {
+            color: var(--primary);
+        }
+
+        .resource-link:hover i {
+            transform: translateX(5px);
+        }
+
+        /* Enhanced hover for table rows */
+        tr {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        tr:hover {
+            z-index: 1;
+        }
+
+        tr::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: transparent;
+            border-radius: 10px;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        tr:hover::after {
+            box-shadow: 0 0 15px var(--primary-glow);
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.7);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            pointer-events: none;
+            z-index: 1000;
+            box-shadow: 0 0 10px var(--primary-glow);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            background: var(--primary);
+            color: black;
+        }
+
+        .back-to-top i {
+            font-size: 1.5em;
+        }
+
+        /* Progress tracking with localStorage */
+        .progress-checkbox {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid var(--primary);
+            border-radius: 4px;
+            margin-right: 8px;
+            cursor: pointer;
+            position: relative;
+            vertical-align: middle;
+            background: rgba(0, 100, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .progress-checkbox:checked {
+            background: var(--primary);
+            box-shadow: 0 0 10px var(--primary);
+        }
+
+        .progress-checkbox:checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            font-weight: bold;
+        }
+
+        .progress-label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 3px;
+            transition: color 0.3s ease;
+            font-size: 0.92em;
+            line-height: 1.3;
+        }
+
+        .progress-label:hover .progress-checkbox {
+            border-color: var(--secondary);
+        }
+
+        .progress-label.completed {
+            text-decoration: line-through;
+            opacity: 0.8;
+        }
+
+        /* Responsive improvements */
+        @media (max-width: 768px) {
+            .description {
+                width: 95%;
+                padding: 10px;
+                font-size: 1em;
+            }
+
+            .resources {
+                padding: 10px;
+            }
+
+            .time-estimate {
+                font-size: 0.8em;
+                padding: 4px 8px;
+            }
+
+            .back-to-top {
+                width: 40px;
+                height: 40px;
+                bottom: 70px;
+                left: 15px;
+            }
         }
     </style>
 </head>
@@ -1348,6 +1550,7 @@
         <div class="schedule-block">
             <div class="tech-lines"></div>
             <h2>🚀 PART 1: JAVA CORE <i class="fab fa-java"></i></h2>
+            <div class="time-estimate"><i class="far fa-clock"></i> Thời gian ước tính: 4-6 tuần</div>
             <table>
                 <thead>
                     <tr>
@@ -1364,9 +1567,24 @@
                         <td>⭐</td>
                         <td>
                             <ul>
-                                <li>Cài đặt môi trường</li>
-                                <li>Biến và kiểu dữ liệu</li>
-                                <li>Toán tử và điều kiện</li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="java-1">
+                                        Cài đặt môi trường
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="java-2">
+                                        Biến và kiểu dữ liệu
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="java-3">
+                                        Toán tử và điều kiện
+                                    </label>
+                                </li>
                             </ul>
                         </td>
                     </tr>
@@ -1376,9 +1594,24 @@
                         <td>⭐⭐</td>
                         <td>
                             <ul>
-                                <li>Class và Object</li>
-                                <li>Tính đóng gói</li>
-                                <li>Kế thừa và đa hình</li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="java-4">
+                                        Class và Object
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="java-5">
+                                        Tính đóng gói
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="java-6">
+                                        Kế thừa và đa hình
+                                    </label>
+                                </li>
                             </ul>
                         </td>
                     </tr>
@@ -1388,20 +1621,51 @@
                         <td>⭐⭐</td>
                         <td>
                             <ul>
-                                <li>Try-catch-finally</li>
-                                <li>Custom Exception</li>
-                                <li>Best Practices</li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="java-7">
+                                        Try-catch-finally
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="java-8">
+                                        Custom Exception
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="java-9">
+                                        Best Practices
+                                    </label>
+                                </li>
                             </ul>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <div class="resources">
+                <h3>Tài liệu tham khảo:</h3>
+                <a href="https://www.w3schools.com/java/" class="resource-link" target="_blank"
+                    aria-label="Java W3Schools Tutorial">
+                    <i class="fas fa-book"></i> W3Schools Java Tutorial
+                </a>
+                <a href="https://docs.oracle.com/javase/tutorial/" class="resource-link" target="_blank"
+                    aria-label="Oracle Java Documentation">
+                    <i class="fas fa-book"></i> Oracle Java Documentation
+                </a>
+                <a href="https://www.codecademy.com/learn/learn-java" class="resource-link" target="_blank"
+                    aria-label="Codecademy Java Course">
+                    <i class="fas fa-laptop-code"></i> Codecademy Java Course
+                </a>
+            </div>
         </div>
 
         <!-- Part 2: Database -->
         <div class="schedule-block">
             <div class="tech-lines"></div>
             <h2>💾 PART 2: DATABASE & JDBC <i class="fas fa-database"></i></h2>
+            <div class="time-estimate"><i class="far fa-clock"></i> Thời gian ước tính: 3-4 tuần</div>
             <table>
                 <thead>
                     <tr>
@@ -1418,9 +1682,24 @@
                         <td>⭐⭐</td>
                         <td>
                             <ul>
-                                <li>Tạo và quản lý Database</li>
-                                <li>Truy vấn cơ bản</li>
-                                <li>Join Tables</li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="db-1">
+                                        Tạo và quản lý Database
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="db-2">
+                                        Truy vấn cơ bản
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="db-3">
+                                        Join Tables
+                                    </label>
+                                </li>
                             </ul>
                         </td>
                     </tr>
@@ -1430,20 +1709,51 @@
                         <td>⭐⭐⭐</td>
                         <td>
                             <ul>
-                                <li>Connection Pool</li>
-                                <li>PreparedStatement</li>
-                                <li>Transaction</li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="db-4">
+                                        Connection Pool
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="db-5">
+                                        PreparedStatement
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="db-6">
+                                        Transaction
+                                    </label>
+                                </li>
                             </ul>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <div class="resources">
+                <h3>Tài liệu tham khảo:</h3>
+                <a href="https://www.w3schools.com/sql/" class="resource-link" target="_blank"
+                    aria-label="SQL W3Schools Tutorial">
+                    <i class="fas fa-book"></i> W3Schools SQL Tutorial
+                </a>
+                <a href="https://docs.oracle.com/javase/tutorial/jdbc/basics/" class="resource-link" target="_blank"
+                    aria-label="Oracle JDBC Tutorial">
+                    <i class="fas fa-book"></i> Oracle JDBC Tutorial
+                </a>
+                <a href="https://www.mysql.com/products/workbench/" class="resource-link" target="_blank"
+                    aria-label="MySQL Workbench">
+                    <i class="fas fa-tools"></i> MySQL Workbench
+                </a>
+            </div>
         </div>
 
         <!-- Part 3: Spring Boot -->
         <div class="schedule-block">
             <div class="tech-lines"></div>
             <h2>🌱 PART 3: SPRING BOOT & REST API <i class="fas fa-leaf"></i></h2>
+            <div class="time-estimate"><i class="far fa-clock"></i> Thời gian ước tính: 6-8 tuần</div>
             <table>
                 <thead>
                     <tr>
@@ -1460,9 +1770,24 @@
                         <td>⭐⭐⭐</td>
                         <td>
                             <ul>
-                                <li>Maven & Dependencies</li>
-                                <li>Spring Boot Starter</li>
-                                <li>Properties & Profiles</li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="spring-1">
+                                        Maven & Dependencies
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="spring-2">
+                                        Spring Boot Starter
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="spring-3">
+                                        Properties & Profiles
+                                    </label>
+                                </li>
                             </ul>
                         </td>
                     </tr>
@@ -1472,9 +1797,24 @@
                         <td>⭐⭐⭐⭐</td>
                         <td>
                             <ul>
-                                <li>Controllers & Endpoints</li>
-                                <li>Request/Response handling</li>
-                                <li>Exception handling</li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="spring-4">
+                                        Controllers & Endpoints
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="spring-5">
+                                        Request/Response handling
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="spring-6">
+                                        Exception handling
+                                    </label>
+                                </li>
                             </ul>
                         </td>
                     </tr>
@@ -1484,20 +1824,50 @@
                         <td>⭐⭐⭐⭐</td>
                         <td>
                             <ul>
-                                <li>Thymeleaf templates</li>
-                                <li>Form handling</li>
-                                <li>Validation</li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="spring-7">
+                                        Thymeleaf templates
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="spring-8">
+                                        Form handling
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="spring-9">
+                                        Validation
+                                    </label>
+                                </li>
                             </ul>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <div class="resources">
+                <h3>Tài liệu tham khảo:</h3>
+                <a href="https://spring.io/guides/gs/spring-boot/" class="resource-link" target="_blank"
+                    aria-label="Spring Boot Getting Started">
+                    <i class="fas fa-book"></i> Spring Boot - Getting Started Guide
+                </a>
+                <a href="https://start.spring.io/" class="resource-link" target="_blank" aria-label="Spring Initializr">
+                    <i class="fas fa-laptop-code"></i> Spring Initializr
+                </a>
+                <a href="https://www.baeldung.com/spring-boot" class="resource-link" target="_blank"
+                    aria-label="Baeldung Spring Boot Tutorials">
+                    <i class="fas fa-graduation-cap"></i> Baeldung Spring Boot Tutorials
+                </a>
+            </div>
         </div>
 
         <!-- Part 3.5: JavaScript & jQuery -->
         <div class="schedule-block">
             <div class="tech-lines"></div>
             <h2>💻 PART 3.5: JAVASCRIPT & JQUERY <i class="fab fa-js"></i> <i class="fab fa-jquery"></i></h2>
+            <div class="time-estimate"><i class="far fa-clock"></i> Thời gian ước tính: 4-5 tuần</div>
             <table>
                 <thead>
                     <tr>
@@ -1514,9 +1884,24 @@
                         <td>⭐⭐</td>
                         <td>
                             <ul>
-                                <li>Syntax và Variables</li>
-                                <li>DOM Manipulation</li>
-                                <li>Event Handling</li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="js-1">
+                                        Syntax và Variables
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="js-2">
+                                        DOM Manipulation
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="js-3">
+                                        Event Handling
+                                    </label>
+                                </li>
                             </ul>
                         </td>
                     </tr>
@@ -1526,9 +1911,24 @@
                         <td>⭐⭐⭐</td>
                         <td>
                             <ul>
-                                <li>Selectors và Effects</li>
-                                <li>AJAX Requests</li>
-                                <li>Form Handling</li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="js-4">
+                                        Selectors và Effects
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="js-5">
+                                        AJAX Requests
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="js-6">
+                                        Form Handling
+                                    </label>
+                                </li>
                             </ul>
                         </td>
                     </tr>
@@ -1538,20 +1938,50 @@
                         <td>⭐⭐⭐</td>
                         <td>
                             <ul>
-                                <li>Consuming REST APIs</li>
-                                <li>JSON Handling</li>
-                                <li>Authentication</li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="js-7">
+                                        Consuming REST APIs
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="js-8">
+                                        JSON Handling
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="js-9">
+                                        Authentication
+                                    </label>
+                                </li>
                             </ul>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <div class="resources">
+                <h3>Tài liệu tham khảo:</h3>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="resource-link" target="_blank"
+                    aria-label="MDN JavaScript Documentation">
+                    <i class="fas fa-book"></i> MDN JavaScript Documentation
+                </a>
+                <a href="https://learn.jquery.com/" class="resource-link" target="_blank"
+                    aria-label="jQuery Learning Center">
+                    <i class="fas fa-graduation-cap"></i> jQuery Learning Center
+                </a>
+                <a href="https://javascript.info/" class="resource-link" target="_blank" aria-label="JavaScript.info">
+                    <i class="fas fa-laptop-code"></i> JavaScript.info
+                </a>
+            </div>
         </div>
 
         <!-- Part 4: Advanced -->
         <div class="schedule-block">
             <div class="tech-lines"></div>
             <h2>⚡ PART 4: ADVANCED TOPICS <i class="fas fa-cogs"></i></h2>
+            <div class="time-estimate"><i class="far fa-clock"></i> Thời gian ước tính: 6-8 tuần</div>
             <table>
                 <thead>
                     <tr>
@@ -1568,9 +1998,24 @@
                         <td>⭐⭐⭐⭐⭐</td>
                         <td>
                             <ul>
-                                <li>Authentication & Authorization</li>
-                                <li>JWT Implementation</li>
-                                <li>OAuth2</li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="adv-1">
+                                        Authentication & Authorization
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="adv-2">
+                                        JWT Implementation
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="adv-3">
+                                        OAuth2
+                                    </label>
+                                </li>
                             </ul>
                         </td>
                     </tr>
@@ -1580,9 +2025,24 @@
                         <td>⭐⭐⭐⭐</td>
                         <td>
                             <ul>
-                                <li>Entity Relationships</li>
-                                <li>Repository Pattern</li>
-                                <li>Custom Queries</li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="adv-4">
+                                        Entity Relationships
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="adv-5">
+                                        Repository Pattern
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="adv-6">
+                                        Custom Queries
+                                    </label>
+                                </li>
                             </ul>
                         </td>
                     </tr>
@@ -1592,20 +2052,51 @@
                         <td>⭐⭐⭐</td>
                         <td>
                             <ul>
-                                <li>JUnit & Mockito</li>
-                                <li>Integration Testing</li>
-                                <li>Test Coverage</li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="adv-7">
+                                        JUnit & Mockito
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="adv-8">
+                                        Integration Testing
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="adv-9">
+                                        Test Coverage
+                                    </label>
+                                </li>
                             </ul>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <div class="resources">
+                <h3>Tài liệu tham khảo:</h3>
+                <a href="https://spring.io/guides/topicals/spring-security-architecture" class="resource-link"
+                    target="_blank" aria-label="Spring Security Architecture Guide">
+                    <i class="fas fa-shield-alt"></i> Spring Security Architecture Guide
+                </a>
+                <a href="https://spring.io/guides/gs/accessing-data-jpa/" class="resource-link" target="_blank"
+                    aria-label="Spring Data JPA Guide">
+                    <i class="fas fa-database"></i> Spring Data JPA Guide
+                </a>
+                <a href="https://junit.org/junit5/docs/current/user-guide/" class="resource-link" target="_blank"
+                    aria-label="JUnit 5 User Guide">
+                    <i class="fas fa-vial"></i> JUnit 5 User Guide
+                </a>
+            </div>
         </div>
 
         <!-- Part 5: Frontend Frameworks -->
         <div class="schedule-block">
             <div class="tech-lines"></div>
             <h2>🔥 PART 5: FRONTEND FRAMEWORKS <i class="fab fa-react"></i> <i class="fab fa-angular"></i></h2>
+            <div class="time-estimate"><i class="far fa-clock"></i> Thời gian ước tính: 8-10 tuần</div>
             <table>
                 <thead>
                     <tr>
@@ -1622,9 +2113,24 @@
                         <td>⭐⭐⭐⭐</td>
                         <td>
                             <ul>
-                                <li>Components & JSX</li>
-                                <li>State & Props</li>
-                                <li>Hooks & Context API</li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="fe-1">
+                                        Components & JSX
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="fe-2">
+                                        State & Props
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="fe-3">
+                                        Hooks & Context API
+                                    </label>
+                                </li>
                             </ul>
                         </td>
                     </tr>
@@ -1634,9 +2140,24 @@
                         <td>⭐⭐⭐⭐⭐</td>
                         <td>
                             <ul>
-                                <li>Components & Modules</li>
-                                <li>Services & Dependency Injection</li>
-                                <li>Observables & RxJS</li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="fe-4">
+                                        Components & Modules
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="fe-5">
+                                        Services & Dependency Injection
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="fe-6">
+                                        Observables & RxJS
+                                    </label>
+                                </li>
                             </ul>
                         </td>
                     </tr>
@@ -1646,14 +2167,44 @@
                         <td>⭐⭐⭐⭐</td>
                         <td>
                             <ul>
-                                <li>Spring Boot + React/Angular</li>
-                                <li>RESTful Services</li>
-                                <li>Security Integration</li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="fe-7">
+                                        Spring Boot + React/Angular
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="fe-8">
+                                        RESTful Services
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="progress-label">
+                                        <input type="checkbox" class="progress-checkbox" data-section="fe-9">
+                                        Security Integration
+                                    </label>
+                                </li>
                             </ul>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <div class="resources">
+                <h3>Tài liệu tham khảo:</h3>
+                <a href="https://reactjs.org/tutorial/tutorial.html" class="resource-link" target="_blank"
+                    aria-label="React Official Tutorial">
+                    <i class="fab fa-react"></i> React Official Tutorial
+                </a>
+                <a href="https://angular.io/tutorial" class="resource-link" target="_blank"
+                    aria-label="Angular Tour of Heroes Tutorial">
+                    <i class="fab fa-angular"></i> Angular Tour of Heroes Tutorial
+                </a>
+                <a href="https://www.fullstackreact.com/" class="resource-link" target="_blank"
+                    aria-label="Fullstack React Book">
+                    <i class="fas fa-book"></i> Fullstack React Book
+                </a>
+            </div>
         </div>
 
     </div>
@@ -1677,6 +2228,22 @@
                 <span>tdthanh.dev2025@gmail.com</span>
             </a>
         </div>
+    </div>
+
+    <!-- Back to top button -->
+    <div class="back-to-top" aria-label="Quay lại đầu trang">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="nav-buttons">
+        <button class="nav-btn" onclick="scrollToSection('part1')">P1</button>
+        <button class="nav-btn" onclick="scrollToSection('part2')">P2</button>
+        <button class="nav-btn" onclick="scrollToSection('part3')">P3</button>
+        <button class="nav-btn" onclick="scrollToSection('part3-5')">P3.5</button>
+        <button class="nav-btn" onclick="scrollToSection('part4')">P4</button>
+        <button class="nav-btn" onclick="scrollToSection('part5')">P5</button>
+        <button class="nav-btn" onclick="scrollToSection('contact')">Contact</button>
     </div>
 
     <!-- Add JavaScript for intersection observer -->
@@ -1706,10 +2273,133 @@
                 block.classList.add('hidden');
                 observer.observe(block);
             });
+
+            // Back to top button functionality
+            const backToTopButton = document.querySelector('.back-to-top');
+
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Progress tracking functionality
+            const checkboxes = document.querySelectorAll('.progress-checkbox');
+
+            // Load saved progress from localStorage
+            checkboxes.forEach(checkbox => {
+                const sectionId = checkbox.dataset.section;
+                const isCompleted = localStorage.getItem(sectionId) === 'completed';
+
+                if (isCompleted) {
+                    checkbox.checked = true;
+                    checkbox.closest('.progress-label').classList.add('completed');
+                }
+
+                checkbox.addEventListener('change', function () {
+                    const section = this.dataset.section;
+                    const label = this.closest('.progress-label');
+
+                    if (this.checked) {
+                        localStorage.setItem(section, 'completed');
+                        label.classList.add('completed');
+                    } else {
+                        localStorage.removeItem(section);
+                        label.classList.remove('completed');
+                    }
+                });
+            });
+
+            // Navigation buttons functionality
+            const sections = [
+                ...document.querySelectorAll('.schedule-block'),
+                document.querySelector('.contact-section')
+            ];
+
+            const navButtons = document.querySelectorAll('.nav-btn');
+
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Tính toán phần trăm hiển thị của element
+                        const visiblePx = entry.intersectionRect.height;
+                        const totalPx = entry.boundingClientRect.height;
+                        const visiblePercent = (visiblePx / totalPx) * 100;
+
+                        // Chỉ active khi element hiển thị ít nhất 30%
+                        if (visiblePercent >= 30) {
+                            // Remove active class from all buttons
+                            navButtons.forEach(btn => btn.classList.remove('active'));
+
+                            // Add active class to corresponding button
+                            let index;
+                            if (entry.target.classList.contains('contact-section')) {
+                                index = navButtons.length - 1;
+                            } else {
+                                index = Array.from(document.querySelectorAll('.schedule-block'))
+                                    .indexOf(entry.target);
+                            }
+                            if (index >= 0) {
+                                navButtons[index].classList.add('active');
+                            }
+                        }
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '-10% 0px',
+                threshold: [0, 0.3, 0.5, 0.7, 1] // Theo dõi nhiều ngưỡng
+            });
+
+            // Observe all sections
+            sections.forEach(section => sectionObserver.observe(section));
         });
+
+        // Scroll to section function
+        function scrollToSection(id) {
+            let section;
+            switch (id) {
+                case 'part1':
+                    section = document.querySelector('.schedule-block:nth-of-type(1)');
+                    break;
+                case 'part2':
+                    section = document.querySelector('.schedule-block:nth-of-type(2)');
+                    break;
+                case 'part3':
+                    section = document.querySelector('.schedule-block:nth-of-type(3)');
+                    break;
+                case 'part3-5':
+                    section = document.querySelector('.schedule-block:nth-of-type(4)');
+                    break;
+                case 'part4':
+                    section = document.querySelector('.schedule-block:nth-of-type(5)');
+                    break;
+                case 'part5':
+                    section = document.querySelector('.schedule-block:nth-of-type(6)');
+                    break;
+                case 'contact':
+                    section = document.querySelector('.contact-section');
+                    break;
+            }
+            if (section) {
+                section.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
     </script>
 
-    <!-- Add existing logo script -->
+    <!-- Add logo script -->
     <script>
         if (window.innerWidth <= 480) {
             const logo = document.querySelector('.logo');
@@ -1765,95 +2455,6 @@
 
                 lastScrollTop = scrollTop;
             });
-        }
-    </script>
-
-    <!-- Add before closing body tag -->
-    <div class="nav-buttons">
-        <button class="nav-btn" onclick="scrollToSection('part1')">P1</button>
-        <button class="nav-btn" onclick="scrollToSection('part2')">P2</button>
-        <button class="nav-btn" onclick="scrollToSection('part3')">P3</button>
-        <button class="nav-btn" onclick="scrollToSection('part3-5')">P3.5</button>
-        <button class="nav-btn" onclick="scrollToSection('part4')">P4</button>
-        <button class="nav-btn" onclick="scrollToSection('part5')">P5</button>
-        <button class="nav-btn" onclick="scrollToSection('contact')">Contact</button>
-    </div>
-
-    <script>
-        const sections = [
-            ...document.querySelectorAll('.schedule-block'),
-            document.querySelector('.contact-section')
-        ];
-
-        const navButtons = document.querySelectorAll('.nav-btn');
-
-        const sectionObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Tính toán phần trăm hiển thị của element
-                    const visiblePx = entry.intersectionRect.height;
-                    const totalPx = entry.boundingClientRect.height;
-                    const visiblePercent = (visiblePx / totalPx) * 100;
-
-                    // Chỉ active khi element hiển thị ít nhất 30%
-                    if (visiblePercent >= 30) {
-                        // Remove active class from all buttons
-                        navButtons.forEach(btn => btn.classList.remove('active'));
-
-                        // Add active class to corresponding button
-                        let index;
-                        if (entry.target.classList.contains('contact-section')) {
-                            index = navButtons.length - 1;
-                        } else {
-                            index = Array.from(document.querySelectorAll('.schedule-block'))
-                                .indexOf(entry.target);
-                        }
-                        if (index >= 0) {
-                            navButtons[index].classList.add('active');
-                        }
-                    }
-                }
-            });
-        }, {
-            root: null,
-            rootMargin: '-10% 0px',
-            threshold: [0, 0.3, 0.5, 0.7, 1] // Theo dõi nhiều ngưỡng
-        });
-
-        // Observe all sections
-        sections.forEach(section => sectionObserver.observe(section));
-
-        function scrollToSection(id) {
-            let section;
-            switch (id) {
-                case 'part1':
-                    section = document.querySelector('.schedule-block:nth-of-type(1)');
-                    break;
-                case 'part2':
-                    section = document.querySelector('.schedule-block:nth-of-type(2)');
-                    break;
-                case 'part3':
-                    section = document.querySelector('.schedule-block:nth-of-type(3)');
-                    break;
-                case 'part3-5':
-                    section = document.querySelector('.schedule-block:nth-of-type(4)');
-                    break;
-                case 'part4':
-                    section = document.querySelector('.schedule-block:nth-of-type(5)');
-                    break;
-                case 'part5':
-                    section = document.querySelector('.schedule-block:nth-of-type(6)');
-                    break;
-                case 'contact':
-                    section = document.querySelector('.contact-section');
-                    break;
-            }
-            if (section) {
-                section.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
         }
     </script>
 </body>
